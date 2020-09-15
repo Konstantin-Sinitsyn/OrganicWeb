@@ -32,6 +32,10 @@ body {
   border-radius: 2rem;
   letter-spacing: 0.075rem;
   box-shadow: 0px 10px 11px 2px $shadow;
+  transition: 0.2s ease;
+  &:hover {
+    background-color: $orangeHover;
+  }
 }
 
 .ml {
@@ -43,6 +47,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 208px;
   position: relative;
   &__image {
     position: absolute;
@@ -52,26 +57,28 @@ body {
     right: 0;
   }
   &__tomato {
-    bottom: -72px;
+    bottom: 136px;
     right: 113px;
   }
   &__beans {
-    bottom: -35px;
+    bottom: 172px;
     left: -8px;
   }
   &__pepper {
-    top: 399px;
-    left: 29px;
+    top: 36%;
+    left: 1.7%;
   }
   &__cucumber {
     top: 0;
-    left: 682px;
+    left: 35.8%;
   }
 }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .main {
@@ -83,7 +90,7 @@ body {
     &__description {
       font-size: 1.12rem;
       line-height: 1.51;
-      margin-top: 60px;
+      margin-top: 79px;
       margin-bottom: 77px;
     }
   }
@@ -153,6 +160,183 @@ body {
         right: 37px;
         bottom: 56px;
       }
+    }
+  }
+}
+
+.section-stok {
+  background-image: url(../img/bg-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 10.37rem;
+  &__text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    max-width: 690px;
+    margin-top: 3.75rem;
+  }
+}
+
+.slider {
+  margin-top: 92px;
+  &-child {
+    padding: 5px 10px;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+  }
+  &-item {
+    border: 1px solid rgba($gray, $alpha);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 520px;
+    position: relative;
+    padding: 2.75rem 2.25rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 2px rgba($gray, 0);
+    transition: 0.3s ease;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+    &:hover::before {
+      background-color: rgba($white, 0.55);
+    }
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($gray, $alpha);
+    }
+    &:hover {
+      .slider-text {
+        transform: translate(0, 0);
+      }
+    }
+  }
+  &-milk {
+    background-image: url(../img/stock/milk.png);
+  }
+  &-pasta {
+    background-image: url(../img/stock/pasta.png);
+  }
+  &-steaks {
+    background-image: url(../img/stock/steaks.png);
+  }
+  &-text {
+    position: absolute;
+    bottom: 2.75rem;
+    left: 2.25rem;
+    max-width: 58%;
+    transform: translate(0, 241px);
+    transition: 0.3s ease;
+    &__title {
+      font-size: 1.875rem;
+      font-family: "Cormorant", serif;
+      margin-bottom: 26px;
+    }
+    &__description {
+      color: rgba($gray, 0.7);
+      margin-bottom: 41px;
+      line-height: 1.5;
+    }
+    &__link {
+      color: $gray;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.075rem;
+      opacity: 0.8;
+      position: relative;
+      padding: 51px;
+      transition: 0.3s ease;
+      &:hover {
+        opacity: 1;
+        padding: 45px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% - 0.93rem);
+        display: block;
+        width: 1.875rem;
+        height: 1.875rem;
+        background-image: url(../img/plus.svg);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: -63px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 10px;
+  height: 18px;
+  opacity: 0.4;
+  transition: 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.slick-prev {
+  right: 80px;
+  background-image: url(../img/arrow-prev.svg);
+}
+.slick-next {
+  right: 0;
+  background-image: url(../img/arrow-next.svg);
+}
+
+.section-originality {
+  padding-bottom: 200px;
+  &__text {
+    max-width: 589px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-top: 93px;
+  }
+}
+
+.originality {
+  &__circle {
+    border-radius: 100%;
+    border: 1px solid $gray;
+    width: 87px;
+    height: 87px;
+    box-sizing: border-box;
+    &__fruits {
+      background-image: url(../img/fruits.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 43px;
+      height: 41px;
     }
   }
 }
