@@ -46,6 +46,10 @@ body {
   margin-left: 7.6em;
 }
 
+.mr {
+  margin-right: 7.6em;
+}
+
 .section-main {
   background-image: url(../img/bg-1.png);
   background-size: cover;
@@ -527,7 +531,7 @@ body {
     height: 204px;
     margin-bottom: 14px;
     &__image {
-      height: 204px;
+      max-height: 204px;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -650,5 +654,55 @@ body {
   }
   &:focus {
     outline: none;
+  }
+}
+.section-delivery {
+  background-image: url(../img/bg-6.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box-delivery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+  &__text {
+    font-size: 1.12rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+  &__span {
+    color: $orange;
+  }
+  &-item {
+    flex: 0 0 49%;
+    &:last-child {
+      flex: 0 0 41%;
+    }
+  }
+  &__link {
+    color: $gray;
+    text-decoration: none;
+    border-bottom: 1px solid $gray;
+  }
+}
+
+.box-delivery-list {
+  &__item {
+    display: block;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 53px;
+    height: 32px;
+  }
+  &__mc {
+    background-image: url(../img/mastercard.svg);
+  }
+  &__visa {
+    background-image: url(../img/visa.svg);
+  }
+  &__paypal {
+    background-image: url(../img/paypal.svg);
   }
 }
